@@ -1,2 +1,4 @@
 # Hacktober-2023
-A repo which has lot of issues, fix it , make pull request and become contributors.
+
+Welcome to Hacktober-2023! This is a repository with a lot of issues that you can fix and make pull requests to become a contributor.
+
