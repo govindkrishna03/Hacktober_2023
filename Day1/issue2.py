@@ -7,5 +7,6 @@ print('Divisible by 5:')
 
 for num in num_list:
     if num % 5 == 0:
+        print(num)
         
-print(num)
+
