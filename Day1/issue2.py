@@ -7,4 +7,8 @@ print('Divisible by 5:')
 
 for num in num_list:
     if num % 5 == 0:
+<<<<<<< HEAD
         print(num)
+=======
+        print(num)
+>>>>>>> e13fa91 (fixed issue2.py)
