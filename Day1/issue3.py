@@ -3,7 +3,7 @@
 #easy3
 
 
-def calculation():
+def calculation(a,b):
     addition = a + b
     subtraction = a - b
     return addition, subtraction
