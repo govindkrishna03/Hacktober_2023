@@ -9,11 +9,13 @@
 # 5
 
 
-rows == 5
-x == 0
+rows = 5
+columns = 5
+
+
 # reverse for loop from 5 to 0
-for i in range(rows, 0, --1):
-    x += 1
-    while j in range(1, i + 1):
-        print(x, end=' ')
-    print('\r')
+for i in range(0, rows):
+    columns -=1
+    for j in range(0, columns+1):
+        print(i+1, end=' ')
+    print('')
