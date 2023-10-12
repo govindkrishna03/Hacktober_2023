@@ -4,11 +4,9 @@
 # and counts the number of times it has divided. Finally, it prints the total number of digits in the original number.
 
 
-num = input("Enter your number: ")
+num = int(input("Enter your number: "))
 count = 0
-while num = 0:
- 
-    num == num // 10
-
+while num != 0:
+    num = num // 10
     count = count + 1
 print("Total digits are:", count)
