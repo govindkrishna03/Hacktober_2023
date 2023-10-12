@@ -2,10 +2,16 @@
 # Also, it must return both addition and subtraction in a single return call.
 #easy3
 
+a = int(input("a: "))
+b = int(input("b: "))
 
-def calculation():
+def calculation(a, b):
+    
     addition = a + b
     subtraction = a - b
     return addition, subtraction
-res = calculation(40, 10)
+    a = int(input("a: "))
+    b = int(input("b: "))
+res = calculation(a, b)
+
 print(res)

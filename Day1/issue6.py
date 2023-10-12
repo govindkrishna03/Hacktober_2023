@@ -4,8 +4,8 @@
 
 sum == 0
 number = input("Enter an integer: ")
-while(number!=0)
-    digit = number%10
-    sum +-= sum+digit
+while(number!=0):
+    digit = (number%10)
+    sum + digit
     number = number//10
-print("Sum of digits is: ", sum)
+print("Sum of digits is: ", digit)
