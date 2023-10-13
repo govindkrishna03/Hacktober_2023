@@ -635,7 +635,7 @@ h1 {
 }
 
 .projects-box:nth-child(3):hover{
-  padding-left: 25%;
+ /* padding-left: 25%;*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: url("../assets/hero/Vector_\(2\).png");
