@@ -412,7 +412,7 @@ button{
 
   .about-grid{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items:center ;
 
@@ -453,7 +453,7 @@ button{
 .about-grid-content-important:hover{
   transform: scale(1.02);
   color: blue;
-  
+
 }
 
 @media (max-width: 700px) {
@@ -511,6 +511,7 @@ flex-direction: column;
 .skills-box-content-stack{
   display: flex;
   justify-content: space-around;
+
 }
 
 .skills-box-hero-heading{
