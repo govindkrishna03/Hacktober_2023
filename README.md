@@ -20,9 +20,6 @@ This repository is open for contributions during Hacktoberfest 2023! We have a v
 10. Create a pull request to this repository.
 11. Wait for your pull request to be reviewed and, hopefully, merged!
 
-**LEADERBOARD**: You can view the ranking by clicking the link 
-[Link](http://51.20.142.245:8000)
-
 ## Issues
 
 We have a variety of issues available for you to work on. Feel free to explore the issues board to find something that interests you. If you have an idea for a new feature or bugfix, open a new issue to discuss it with the community.
