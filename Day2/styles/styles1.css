@@ -450,6 +450,11 @@ button{
   font-weight: bold;
   
 }
+.about-grid-content-important:hover{
+  transform: scale(1.02);
+  color: blue;
+  
+}
 
 @media (max-width: 700px) {
   .about-grid{
