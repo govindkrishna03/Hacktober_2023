@@ -448,13 +448,27 @@ button{
   font-family: "Source Code Pro", monospace;
   color: #FB1818;
   font-weight: bold;
+  animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
   
 }
 
+.about-grid-content-important:hover{
+   animation-name: bounce;
+   animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+} 
+
 @media (max-width: 700px) {
   .about-grid{
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   }
 }
 
