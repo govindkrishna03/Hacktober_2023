@@ -565,7 +565,7 @@ h1 {
 }
 
 .timeline-item {
-  align-self: center;
+  /*align-self: center;*/
   padding: 3em 2em 2em;
   position: relative;
   color: rgba(255, 255, 255, 0.7);
