@@ -2,8 +2,8 @@
 # Also, it must return both addition and subtraction in a single return call.
 #easy3
 
+def calculation(a,b):
 
-def calculation(a, b):
     addition = a + b
     subtraction = a - b
     return (addition, subtraction)
