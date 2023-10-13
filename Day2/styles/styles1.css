@@ -639,7 +639,6 @@ h1 {
 }
 
 .projects-box:nth-child(3):hover{
-  padding-left: 25%;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: url("../assets/hero/Vector_\(2\).png");
@@ -647,8 +646,8 @@ h1 {
 }
 
 .projects-box:nth-child(4):hover{
-  padding-left: 25%;
   background-size: 100%;
+  background-repeat: no-repeat;
   background-image: url("../assets/projects/Screenshot\ from\ 2023-06-29\ 19-52-58.png");
   opacity: 0.4;
 }
