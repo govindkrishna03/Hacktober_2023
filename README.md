@@ -8,7 +8,7 @@ This repository is open for contributions during Hacktoberfest 2023! We have a v
 2. Clone your fork to your local machine.
 3. You can find the issues in this repository page.
 
-<div align=center>
+<div align=left>
   <img src="https://github.com/govindkrishna03/Hacktober_2023/blob/main/assets/Screenshot.png?raw=true" alt="image">
 </div>
 
