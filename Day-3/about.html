@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Library Management System</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li,
+      address {
+        margin: 0;
+        padding: 0;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li,
+      address {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Set a background color and font family for the whole page */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        overflow-x: hidden;
+        margin: 0; /* Reset margin */
+        padding: 0; /* Reset padding */
+      }
+
+      /* Style the header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px; /* Add some padding for better spacing */
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      .logo img {
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      .navbar a {
+        display: block;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: background-color 0.4s, color 0.4s;
+      }
+
+      .navbar a:hover {
+        background-color: black;
+        color: black;
+        border-radius: 25px;
+      }
+      .contain {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .intro {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+      .services-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        line-height: 1.6;
+      }
+
+      .services-content h3 {
+        margin-bottom: 15px;
+        font-size: 30px;
+      }
+
+      .services-content p {
+       font-size:10px
+        margin-bottom: 20px;
+      }
+
+      .services-content ul {
+        margin-left: 20px;
+        font-size:120px
+      }
+      .services-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+     
+
+      footer {
+        background: black;
+        height: auto;
+        width: 100vw;
+        font-family: "Open Sans";
+        padding-top: 40px;
+        color: white;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-content h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+      }
+
+      .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+      }
+
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+      }
+
+      .socials li {
+        margin: 0 10px;
+      }
+
+      .socials a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .socials a i {
+        font-size: 1.1rem;
+        transition: color 0.4s ease;
+      }
+
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      .footer-bottom {
+        background: black;
+        width: 100vw;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+      }
+
+      .footer-bottom span {
+        text-transform: uppercase;
+        opacity: 0.4;
+        font-weight: 200;
+      }
+      .no1 {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .developer-section{
+            flex-direction: column ;
+        }
+        .developer{
+            flex-direction: column;
+        }
+        .navbar {
+          flex-direction: column;
+        }
+        .header {
+          flex-direction: column;
+        }
+
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="images/logoin.png" alt="Logo" />
+        <div style="color: black">Eminent Library Society</div>
+      </div>
+
+      <div class="navbar">
+        <a href="#">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#">Collections</a>
+        <a href="events.html">Events</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+    <div class="contain">
+        <img src="images/logoin.png"/>
+      <h2 style="text-align: center; padding: 20px; font-size: xx-large">
+        Welcome to Eminent Library Society
+      </h2>
+      <div class="no1">
+        <p class="intro" style="font-size: 20px">
+          At Eminent Library Society, we are dedicated to fostering a passion
+          for reading, learning, and knowledge dissemination within our
+          community. Our mission is to provide an exceptional library experience
+          that enriches the lives of individuals of all ages and backgrounds.
+          Our mission is to foster a love for reading, learning, and knowledge
+          dissemination. We strive to create an inclusive and welcoming
+          environment where individuals of all ages can explore, discover, and
+          grow.
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="services-container">
+        <div class="services-content">
+          <h3>Library Services</h3>
+          <p>Our library offers a wide range of services, including:</p>
+          <ul>
+            <li>Borrowing and returning books</li>
+            <li>Access to a diverse collection of books and resources</li>
+            <li>Online catalog and search functionality</li>
+            <li>Community events and workshops</li>
+            <li>Quiet study spaces</li>
+            <li>Reference and research assistance</li>
+          </ul>
+        </div>
+        <div class="services-image">
+          <img
+            src="https://imgs.search.brave.com/aclN715GCIeMjdwss17n_IxRkR51NO6BmfbH79QSxNE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC84OS85Ni9s/aWJyYXJ5LWJhY2tn/cm91bmQtaGFuZC1k/cmF3aW5nLXJldHJv/LWJvb2tzLXZlY3Rv/ci0yMjc2ODk5Ni5q/cGc"
+            alt="Library Services"
+          />
+        </div>
+      </div>
+
+  
+    <footer>
+      <div class="footer-content">
+        <h3>Eminent Library Society</h3>
+        <p>Where dreams come true</p>
+        <ul class="socials">
+          <li>
+            <a href="www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2023 Eminent Library Society. designed by
+          <span>us.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News and Events</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: white;
+        font-family: 'Karla', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        overflow-x: hidden;
+        
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: white;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .logo img {
+        height: 50px;
+        margin: 20px;
+      }
+
+      .navbar {
+        display: flex;
+      }
+
+      .navbar a {
+        display: block;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+
+      .content-container {
+        display: flex;
+        flex-wrap: wrap;
+    
+      }
+
+      .event,
+      .news-item {
+        /* ... (your existing card styles) */
+        display: flex;
+      }
+
+      .event .event-info,
+      .news-item .news-info {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .event-date,
+      .news-title {
+        font-size: 20px;
+        color: #888;
+      }
+
+      .event-title,
+      .news-title {
+        font-size: 8px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .event-content,
+      .news-content {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .image-container {
+        width: 250px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      .news-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .header {
+          flex-direction: column;
+        }
+
+        .logo {
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .navbar {
+          flex-direction: column;
+        }
+
+        .navbar a {
+          font-size: 16px;
+        }
+      }
+      .footer-end {
+        background-color: #333;
+        color: white;
+        padding: 30px 0;
+      }
+
+      .footer-end .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 20px;
+      }
+
+      .footer-end .col-12 {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      .footer-end .col-md-12 {
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .quote {
+        font-style: italic;
+      }
+
+      .social_icons a {
+        color: white;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .menu-footer-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .menu-footer-container ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu-footer-container ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .menu-footer-container ul li:last-child {
+        margin-right: 0;
+      }
+
+      .menu-footer-container a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo1{
+        width: 100px; 
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+      }
+
+      footer {
+        background:black;
+        height: auto;
+        width: 100vw;
+        font-family: "Open Sans";
+        padding-top: 40px;
+        color: white;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-content h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+      }
+      .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+      }
+      .socials li {
+        margin: 0 10px;
+      }
+      .socials a {
+        text-decoration: none;
+        color: white;
+      }
+      .socials a i {
+        font-size: 1.1rem;
+        transition: color 0.4s ease;
+      }
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      .footer-bottom {
+        background: black;
+        width: 100vw;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .footer-bottom p {
+        font-size: 14px;
+        word-spacing: 2px;
+        
+      }
+      .footer-bottom span {
+        text-transform: uppercase;
+        opacity: 0.4;
+        font-weight: 200;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="images/logoin.png" alt="Logo" />
+        <div style="color: black">Eminent Library Society</div>
+      </div>
+
+      <div class="navbar">
+        <a href="loading.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="books.html">Collections</a>
+        <a href="events.html">Events</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content-container">
+        <div class="event">
+          <div class="image-container">
+            <img
+              src="https://imgs.search.brave.com/19T3v8sMUgBtu5QqhbUA5SvEGqz74kwl9wxsi3IyPOE/rs:fit:500:0:0/g:ce/aHR0cDovL3d3dy5w/cmZvbC5vcmcvcml2/ZXIvd3AtY29udGVu/dC9nYWxsZXJ5L21h/aW4tZ2FsbGVyeS9i/b29rc2hvcF93ZWIu/anBn"
+              alt="Event Image 1"
+              class="news-image"
+            />
+          </div>
+          <div class="event-info">
+            <div class="event-title">Library Book Sale</div>
+            <div class="event-date">Date: August 15, 2023</div>
+            <div class="event-content">
+              Join us for a special book sale event where you can explore a wide
+              range of books at discounted prices. Don't miss this opportunity
+              to expand your personal library!
+            </div>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="image-container">
+            <img
+              src="https://imgs.search.brave.com/dry9xc7lIBXMxm1GeIwQijzA1rus_-2n5MyEJQKmnM8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9qYW5l/LXNtaXRoLmFnZW50/Lm15ZHVkdW0uY29t/L2ZpbGVzLzIwMTgv/MTIvSmFuZS1TbWl0/aC5qcGc"
+              alt="Event Image 2"
+              class="news-image"
+            />
+          </div>
+          <div class="event-info">
+            <div class="event-title">Author Talk: Jane Smith</div>
+            <div class="event-date">Date: September 5, 2023</div>
+            <div class="event-content">
+              We're excited to host acclaimed author Jane Smith for an engaging
+              talk about her latest book. Get a chance to meet the author and
+              participate in a Q&A session.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="news-item">
+          <div class="image-container">
+            <img
+              src="https://imgs.search.brave.com/XDHlUSlCaGf2SKK1h4FVojXkMqO_2POIwVCVhPPYqIM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzIyL2Nm/LzkwLzIyY2Y5MGRi/NmQyZTBiM2E3ZDc5/YjRiZmIxYmFjY2Rm/LmpwZw"
+              alt="News Image 1"
+              class="news-image"
+            />
+          </div>
+          <div class="news-info">
+            <div class="news-title">New Reading Room Upgrades</div>
+            <div class="news-content">
+              We are thrilled to announce the completion of our Reading Room
+              upgrades. Enjoy a more comfortable and inspiring reading
+              environment with our new plush green carpet and improved power
+              points.
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="image-container">
+            <img
+              src="https://imgs.search.brave.com/NrR1auSaa99iWAPP4vg58RM5djgBwAjr4MfTif5eumM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YXRlYWNoYWJsZXRl/YWNoZXIuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE2LzA1/L0lNR18yNTkwLTkx/N3gxMDI0LmpwZw"
+              alt="News Image 2"
+              class="news-image"
+            />
+          </div>
+          <div class="news-info">
+            <div class="news-title">Summer Reading Challenge</div>
+            <div class="news-content">
+              Participate in our exciting Summer Reading Challenge and win
+              amazing prizes! Explore a world of stories and embark on a reading
+              adventure this summer.
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more news items here -->
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Eminent Library Society</h3>
+        <p>Where dreams come true</p>
+        <ul class="social">
+          <li>
+            <a href="www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2023 Eminent Library Society. designed by
+          <span>us.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
