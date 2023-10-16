@@ -2,7 +2,7 @@ import { AppBar, Box, Toolbar, Typography, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { getToken } from '../services/LocalStorageService';
 const Navbar = () => {
-  const { access_token } = "getToken()"
+  const { access_token } = getToken()
   return <>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="secondary" sx={{ background: 'linear-gradient(to right, #8A0707, #1C1C1C)',}}>
