@@ -7,23 +7,21 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-image: url(images/background.jpg);
-        background-size: contain;
-        opacity: 0.8;
+        background-image: url("images/background.jpg");
+        background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
+        margin: 0;
       }
       .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        overflow: hidden;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -32,53 +30,41 @@
       .navbar a {
         color: #000;
         text-decoration: none;
-        padding: 50px;
+        padding: 10px 20px;
         margin-right: 10px;
       }
       .navbar a:hover {
         background-color: #f2f2f2;
       }
       .login-container {
-        max-width: 500px;
+        max-width: 1000px;
         padding: 20px;
         background-color: #fff;
-        border-radius: 25px;
+        border-radius: 30px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
       .login-container h1 {
         text-align: center;
-        opacity: 1;
-        padding: 2px;
       }
       .form-group {
         margin-bottom: 15px;
-        position: absolute;
-        opacity: 1;
-        padding: 10px;
       }
       .form-group label {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        transform: translateY(-75%);
+        display: block;
         opacity: 0.5;
-
-        padding: 10px 0px;
+        padding: 10px 0;
       }
       .form-group input {
-        opacity: 1;
-        width: 40vh;
-        height: 2vh;
+        width: 90%;
         padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
       }
       .form-group input[type="submit"] {
-        width: 100%;
         background-color: #4caf50;
         color: #fff;
         font-weight: bold;
         border: none;
-        
         cursor: pointer;
         border-radius: 25px;
       }
@@ -86,37 +72,34 @@
         background-color: #45a049;
       }
       .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         padding: 10px;
       }
       .button input {
-        width: 20vh;
+        width: 100%;
         padding: 10px;
-        border-radius: 25px;
         background-color: #4caf50;
         color: #fff;
         font-weight: bold;
         border: none;
         cursor: pointer;
+        border-radius: 25px;
       }
       .button input:hover {
-        background-color: #45a07d;
+        background-color: #45a049;
       }
       .logo {
         text-align: center;
       }
       .logo img {
-        image-rendering: auto;
-        height: 5vh;
+        height: 50px;
       }
       .forgot-password {
         text-align: center;
         margin-top: 10px;
       }
       .forgot-password a {
-        color: #000000;
+        color: #000;
         text-decoration: none;
       }
       .dont-have-account {
@@ -124,28 +107,10 @@
         margin-top: 10px;
       }
       .dont-have-account a {
-        color: #000000;
+        color: #000;
         text-decoration: none;
       }
-
-      .logo_container {
-      width: 400px;
-      height: 0px;
-      }
     </style>
-    <script>
-     function validateForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-
-
-  window.location.href = "home.html";
-
-  return false;
-}
-
-
-    </script>
   </head>
   <body>
     <div class="header">
@@ -161,20 +126,17 @@
       </div>
     </div>
     <div class="login-container">
-      <div class="logo">
-        <img src="images/logoin.png" alt="Logo" class="logo_container" />
-      </div>
       <h1>LOGIN</h1>
       <form action="/login" method="post" onsubmit="return validateForm();">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" id="username" name="username"  />
+          <input type="text" id="username" name="username" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password"  />
+          <input type="password" id="password" name="password" />
         </div>
-        <div class="button">
+        <div class="form-group">
           <input type="submit" value="Login" />
         </div>
       </form>
@@ -182,10 +144,21 @@
         <p>Forgot Password</p>
       </div>
       <div class="dont-have-account">
-        <a href="register.html"
-          >Don't have an Account? <span><u>Sign Up</u></span></a
-        >
+        <a href="register.html">Don't have an Account? <u>Sign Up</u></a>
       </div>
     </div>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (!username || !password) {
+          alert("Please fill in both fields.");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
   </body>
 </html>
