@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   CssBaseline,
@@ -12,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { unSetUserToken } from "../features/authSlice";
 import { getToken, removeToken } from "../services/LocalStorageService";
 import { useGetLoggedUserQuery } from "../services/userAuthApi";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { setUserInfo, unsetUserInfo } from "../features/userSlice";
 import ChangePassword from "./auth/ChangePassword";
 import Nav from "../components/Navbar";
@@ -29,6 +30,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { access_token } = getToken();
+
   const { data, isSuccess } = useGetLoggedUserQuery(access_token);
 
   const [userData, setUserData] = useState({
@@ -89,11 +91,13 @@ const Dashboard = () => {
               >
                 Logout
               </Button>
+              {/* Add onClick handler for "Change Password" button */}
               <Button
                 className="but-2"
                 variant="contained"
                 size="large"
                 sx={{ mt: 2 }}
+                onClick={handleOpenDialog}
               >
                 Change Password
               </Button>
