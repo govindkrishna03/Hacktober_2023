@@ -1,6 +1,6 @@
 # Blood Bank App
 
-This is a web application called Blood Bank App that serves as a platform for managing blood donation and requests. The application is built using React for the frontend and Django for the backend.
+This is a web application called Blood Bank App that serves as a platform for managing blood donation and requests. The application is built using React for the frontend
 
 ## Features
 
