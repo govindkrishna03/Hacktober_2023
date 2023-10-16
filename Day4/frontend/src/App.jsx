@@ -27,7 +27,7 @@ function App() {
               path="login"
               element={!access_token ? <LoginReg /> : <Navigate to="/" />}
             />
-            <Route path="/Register" element={<LoginReg />} />
+            <Route path="/Register" element={<Registration />} />
             <Route
               path="sendpasswordresetemail"
               element={<SendPasswordResetEmail />}
