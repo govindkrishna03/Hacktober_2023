@@ -34,8 +34,8 @@ const BloodDonation = () => {
             Blood donation is a voluntary procedure that can help save the lives of others. Donated blood is used to help people who have lost blood due to injury or surgery, people with blood disorders such as anemia or sickle cell disease, and those undergoing cancer treatments. One donation can save up to three lives
           </h3>
           <div className="button-container">
-            <Link to='/'><Button variant="contained" size="large" className="donate-button">Donate</Button></Link>
-            <Link to='/'><Button variant="contained" size="large" className='recieve-button'>Receive</Button></Link>
+            <Link to='/donate'><Button variant="contained" size="large" className="donate-button">Donate</Button></Link>
+            <Link to='/recieve'><Button variant="contained" size="large" className='recieve-button'>Receive</Button></Link>
           </div>
         </div>
       </div>
