@@ -61,7 +61,6 @@ const UserLogin = () => {
       >
         <TextField
           margin="normal"
-          disabled="true"
           required
           fullWidth
           id="email"
