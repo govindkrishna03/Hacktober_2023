@@ -18,7 +18,7 @@ const BloodDonation = () => {
     <div className='outer'>
       <div className='opacity'>
         <div className='video-container'>
-          <video className='video' muted loop>
+          <video className='video' autoPlay muted loop>
             <source src={video} type='video/mp4' />
           </video>
         </div>
