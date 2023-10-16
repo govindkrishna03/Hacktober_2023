@@ -20,6 +20,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Contact />} />
             <Route path="home" element={<Home />} />
+            <Route path="/donate" element={<Donate />} />
             {access_token ? (
               <Route path="Receive" element={<Receive />} />
             ) : null}
