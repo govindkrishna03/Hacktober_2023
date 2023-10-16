@@ -1,0 +1,21 @@
+.hello{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px; 
+    padding-bottom: 80px;
+}
+
+.visit{
+    width: 500px;
+    height: auto;
+
+}
+
+.don{
+    width: 500px;
+    height: auto;
+}

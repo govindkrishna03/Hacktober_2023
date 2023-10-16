@@ -1,0 +1,62 @@
+.dash{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 98px;
+    height: 100vh;
+}
+
+.but-2{
+    color: blueviolet;
+}
+
+.da {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 22vh;
+}
+
+.email{
+    margin-top: 41px;
+}
+
+.but {
+    margin-top: 23px;
+}
+
+.board {
+    font-size: 68px;
+    margin-top: 1px;
+    margin-bottom: 6px;
+    font-family: 'EB Garamond, serif';
+}
+
+.total{
+    background: rgb(158,0,0);
+    background: radial-gradient(circle, rgba(158,0,0,0.8883928571428571) 0%, rgba(0,0,0,0.9780287114845938) 90%);
+    justify-content: center;
+}
+
+
+.card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.da-cover{
+    background-color: rgb(210, 210, 210);
+    height: 80vh;
+    width: 90vh;
+    border-radius: 100px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+  
