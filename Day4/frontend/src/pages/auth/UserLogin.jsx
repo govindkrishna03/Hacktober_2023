@@ -44,7 +44,7 @@ const UserLogin = () => {
     {server_error.email ? console.log(server_error.email[0]) : ""}
     {server_error.password ? console.log(server_error.password[0]) : ""}
     <Box component='form' noValidate sx={{ mt: 1 }} id='login-form' onSubmit={handleSubmit}>
-      <TextField margin='normal' disabled="true" required fullWidth id='email' name='email' label='Email Address' />
+      <TextField margin='normal' required fullWidth id='email' name='email' label='Email Address' />
       {server_error.email ? <Typography style={{ fontSize: 12, color: 'red', paddingLeft: 10 }}>{server_error.email[0]}</Typography> : ""}
       <TextField margin='normal' required fullWidth id='password' name='password' label='Password' />
       {server_error.password ? <Typography style={{ fontSize: 12, color: 'red', paddingLeft: 10 }}>{server_error.password[0]}</Typography> : ""}
