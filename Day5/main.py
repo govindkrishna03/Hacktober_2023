@@ -13,6 +13,13 @@ from textbox import open_label_window
 from buttons import RoundedButton,button_list
 
 
+
+
+def open_new_window(lst):
+    param = lst
+    subprocess.run(["python", 'mail/mail.py', str(lst)])
+
+
 def thred(func):
     thread = threading.Thread(target=func, args=(10,))
     thread.start()
@@ -157,4 +164,3 @@ if __name__ == "__main__":
     window.show()
 
     app.exec_()
-
