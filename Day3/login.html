@@ -109,7 +109,7 @@
       }
       .logo img {
         image-rendering: auto;
-        height: 5vh;
+        width: 5vh;
       }
       .forgot-password {
         text-align: center;
@@ -130,18 +130,18 @@
 
       .logo_container {
       width: 400px;
-      height: 0px;
+      height: auto;
       }
     </style>
     <script>
      function validateForm() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-
+  if (username === "" || password === "") {return false}
 
   window.location.href = "home.html";
 
-  return false;
+  return true;
 }
 
 
@@ -179,7 +179,7 @@
         </div>
       </form>
       <div class="forgot-password">
-        <p>Forgot Password</p>
+        <a href="forgot_password.html">Forgot Password</a>
       </div>
       <div class="dont-have-account">
         <a href="register.html"
