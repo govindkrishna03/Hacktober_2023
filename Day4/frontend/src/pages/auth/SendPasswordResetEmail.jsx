@@ -30,7 +30,7 @@ const SendPasswordResetEmail = () => {
   return <>
     <Grid container justifyContent='center'>
       <Grid item sm={6} xs={12}>
-        <div class="heading" style={{ fontSize: 8 }}>
+        <div class="heading" style={{ fontSize: 18 }}>
         Reset Password
         </div>
         <Box component='form' noValidate sx={{ mt: 1 }} id='password-reset-email-form' onSubmit={handleSubmit}>
