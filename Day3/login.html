@@ -109,7 +109,7 @@
       }
       .logo img {
         image-rendering: auto;
-        height: 5vh;
+        width: 5vh;
       }
       .forgot-password {
         text-align: center;
@@ -138,9 +138,14 @@
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
+
   if (username === "" || password === ""){
     return false;
   }
+
+  if (username === "" || password === "") {return false}
+
+
   window.location.href = "home.html";
 
   return true;
@@ -182,6 +187,7 @@
       </form>
       <div class="forgot-password">
         <a href="forgot_pwd.html"><u>Forgot Password</u></a>
+        <a href="forgot_password.html">Forgot Password</a>
       </div>
       <div class="dont-have-account">
         <a href="register.html"
