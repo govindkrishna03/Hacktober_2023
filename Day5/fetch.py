@@ -1,7 +1,7 @@
 import threading
 
 import requests
-from api_key import api_key
+api_key = "8T2ON7b7vpR4FtEdRQHh8bzrtYsNGNkhtJT7j6m8"
 def thred(func):
     thread = threading.Thread(target=func, args=(10,))
     thread.start()

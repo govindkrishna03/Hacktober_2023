@@ -1,13 +1,15 @@
 import subprocess
 import sys
 from PyQt5.QtGui import QColor, QPalette
-from PyQt5.QtWidget import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QLabel
 from diagbox import widg
 from PyQt5.QtCore import Qt
 import requests
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
 from PyQt5.QtGui import QImage, QPixmap
 from image import getImg
+from textbox import open_label_window
+from buttons import RoundedButton,button_list
 import threading
 
 
@@ -77,8 +79,8 @@ def fetch_apply(key='DEMO_KEY', rover='curiosity', cam='', earth_date='2015-6-3'
         text.setText("  "+diag.rover.currentText()+"  "+ diag.cam.currentText()+"  "+ str(diag.earthdate.selectedDate().toPyDate()))
 
 
-if __name__ == "_main_":
-    app = QApplication([])
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
     window = QWidget()
     from fetch import *
 
