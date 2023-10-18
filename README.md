@@ -26,4 +26,4 @@ We have a variety of issues available for you to work on. Feel free to explore t
 
 By contributing to this repository, you agree to comply with its terms. Happy Hacking!
 
-![leaderboard](./assets/leaderboard.png)
+![leaderboard](./assets/winners.png)
