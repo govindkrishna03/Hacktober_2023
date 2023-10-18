@@ -1,14 +1,17 @@
 import subprocess
 import sys
 from PyQt5.QtGui import QColor, QPalette
-from PyQt5.QtWidget import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QLabel
 from diagbox import widg
 from PyQt5.QtCore import Qt
 import requests
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
 from PyQt5.QtGui import QImage, QPixmap
-from image import getImg
 import threading
+from image import getImg
+from textbox import open_label_window
+from buttons import RoundedButton,button_list
+
 
 
 
@@ -16,10 +19,10 @@ def open_new_window(lst):
     param = lst
     subprocess.run(["python", 'mail/mail.py', str(lst)])
 
+
 def thred(func):
     thread = threading.Thread(target=func, args=(10,))
     thread.start()
-
 
 def next():
     global image_label, text, n, but
@@ -38,7 +41,6 @@ def next():
         text.setText("  "+diag.rover.currentText()+"  "+ diag.cam.currentText()+"  "+ str(diag.earthdate.selectedDate().toPyDate()))
         but.setText(f'img {n+1}/{len(lst)}')
 
-
 def prev():
     global image_label, text, n, but
     if (n-1) >= 0:
@@ -55,7 +57,6 @@ def prev():
         image_label.update()
         text.setText("  "+diag.rover.currentText()+"  "+ diag.cam.currentText()+"  "+ str(diag.earthdate.selectedDate().toPyDate()))
         but.setText(f'img {n+1}/{len(lst)}')
-
 
 def fetch_apply(key='DEMO_KEY', rover='curiosity', cam='', earth_date='2015-6-3'):
     global lst
@@ -76,10 +77,10 @@ def fetch_apply(key='DEMO_KEY', rover='curiosity', cam='', earth_date='2015-6-3'
         next()
         text.setText("  "+diag.rover.currentText()+"  "+ diag.cam.currentText()+"  "+ str(diag.earthdate.selectedDate().toPyDate()))
 
-
-if __name__ == "_main_":
-    app = QApplication([])
+if __name__ == "__main__":
+    app = QApplication([sys.argv])
     window = QWidget()
+
     from fetch import *
 
     # ---------------------------------------------buttons--------------------------------------------------------------
